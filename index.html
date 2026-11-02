@@ -246,6 +246,19 @@ textarea{resize:vertical;min-height:130px}
 .car-teaser .bdg2{display:inline-block;background:#d43c2c;color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin-bottom:14px;width:max-content}
 @media (max-width:980px){.bundle{grid-template-columns:1fr;gap:14px;padding:34px 24px 26px}.bundle .ico{display:none}.car-teaser{grid-template-columns:1fr}.car-teaser .img{min-height:0;aspect-ratio:4/3}.car-teaser .txt{padding:34px 26px}}
 
+.partner{display:grid;grid-template-columns:1.2fr 1fr;gap:0;border:1px solid var(--line);border-radius:calc(var(--r) + 10px);overflow:hidden;background:var(--card)}
+.partner .txt{padding:52px 48px}
+.partner h2{font-size:clamp(2rem,4.2vw,3.2rem);margin:14px 0 16px}
+.partner p{color:var(--muted);margin-bottom:14px}
+.partner .bdg2{display:inline-block;background:#d43c2c;color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin-bottom:14px}
+.partner .side{background:#f3ece8;padding:52px 44px;display:flex;flex-direction:column;justify-content:center;border-left:1px solid var(--line)}
+.partner .brand{font-family:var(--serif);font-style:italic;font-size:clamp(2.2rem,4vw,3.2rem);line-height:1;color:#7a5c55}
+.partner .brand small{display:block;font-family:var(--sans);font-style:normal;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:#a08a84;margin-top:10px}
+.partner ul{list-style:none;margin:26px 0 24px}
+.partner li{padding:10px 0;border-bottom:1px solid #e3d8d3;display:flex;gap:10px;font-size:.95rem}
+.partner li::before{content:"✓";font-weight:700;color:#7a5c55}
+@media (max-width:980px){.partner{grid-template-columns:1fr}.partner .txt{padding:34px 26px}.partner .side{padding:34px 26px;border-left:0;border-top:1px solid var(--line)}}
+
 /* SEO / FAQ */
 .seo-text{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
 .seo-text h2{font-size:clamp(2.2rem,4.6vw,3.6rem);margin:16px 0 20px}
@@ -368,6 +381,33 @@ footer{padding:80px 0 40px}
             <a href="#auto" class="btn light">Pozrieť svadobné auto <span class="ar">→</span></a>
             <a href="tel:+421949098880" class="btn glass">0949 098 880</a>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="partner reveal">
+        <div class="txt">
+          <div class="bdg2">Spolupráca · Video + výzdoba</div>
+          <div class="tag">Svadby z Ateliéru</div>
+          <h2>Video aj výzdoba <span class="it">z jedných rúk</span></h2>
+          <p>Spolupracujem so <strong>Svadby z Ateliéru</strong> – svadobné výzdoby sál, kytice a pomoc s plánovaním svadby z Ateliéru Kvety v Trstenej.</p>
+          <p>Keď si objednáte <strong>svadobné video u mňa</strong> a <strong>výzdobu od Svadby z Ateliéru</strong>, dostanete <strong>zvýhodnenú cenu</strong>. Výzdoba bude zároveň krásne zachytená vo vašom svadobnom filme. Podrobnosti dohodneme telefonicky.</p>
+          <div class="hero-btns" style="margin-top:20px">
+            <a href="#kontakt" data-typ="Svadba" data-vyzdoba="1" class="btn">Chcem video + výzdobu <span class="ar">→</span></a>
+            <a href="tel:+421949098880" class="btn ghost">0949 098 880</a>
+          </div>
+        </div>
+        <div class="side">
+          <div class="brand">Svadby z Ateliéru<small>Ateliér Kvety · Trstená</small></div>
+          <ul>
+            <li>Svadobné výzdoby</li>
+            <li>Svadobné kytice</li>
+            <li>Plánovanie svadby</li>
+          </ul>
+          <a href="https://www.instagram.com/svadbyzatelieru/" target="_blank" rel="noopener" class="btn ghost" style="width:max-content">@svadbyzatelieru <span class="ar">↗</span></a>
         </div>
       </div>
     </div>
@@ -618,6 +658,12 @@ footer{padding:80px 0 40px}
               <option>Nie</option>
               <option selected>Ešte neviem</option>
             </select></div>
+          <div class="f full"><label>Výzdoba od Svadby z Ateliéru (zvýhodnená cena s videom)</label>
+            <select name="Výzdoba Svadby z Ateliéru">
+              <option>Áno, mám záujem</option>
+              <option>Nie</option>
+              <option selected>Ešte neviem</option>
+            </select></div>
           <div class="f full"><label>Svadobné auto na prenájom (Peugeot 306 Cabriolet, od 150 €)</label>
             <select name="Svadobné auto">
               <option>Áno, mám záujem</option>
@@ -775,6 +821,7 @@ document.addEventListener('click',e=>{
   const a=e.target.closest('a[href^="#"]'); if(!a) return;
   const id=a.getAttribute('href').slice(1); if(!pages.includes(id)) return;
   e.preventDefault();
+  if(a.dataset.vyzdoba){const sv=document.querySelector('select[name="Výzdoba Svadby z Ateliéru"]');if(sv)sv.value='Áno, mám záujem'}
   if(a.dataset.auto){const sa=document.querySelector('select[name="Svadobné auto"]');if(sa)sa.value=a.dataset.auto==='balik'?'Áno – balíček svadobné video + kabriolet':'Áno, mám záujem'}
   if(a.dataset.typ){if(/Svad/.test(a.dataset.typ))tab('wForm');else{tab('oForm');const s=$('#typ');[...s.options].forEach(o=>{if(o.text===a.dataset.typ)s.value=o.value})}}
   show(id,true);
