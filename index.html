@@ -259,6 +259,22 @@ textarea{resize:vertical;min-height:130px}
 .partner li::before{content:"✓";font-weight:700;color:#7a5c55}
 @media (max-width:980px){.partner{grid-template-columns:1fr}.partner .txt{padding:34px 26px}.partner .side{padding:34px 26px;border-left:0;border-top:1px solid var(--line)}}
 
+.igcard{max-width:760px;margin:70px auto 0;background:#fff;border:1px solid var(--line);border-radius:calc(var(--r) + 6px);overflow:hidden;box-shadow:0 30px 70px -40px rgba(0,0,0,.35)}
+.igcard .bar{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-bottom:1px solid #efefef;font-weight:700;font-size:.95rem}
+.igcard .bar span{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;font-size:1.35rem}
+.igcard .head{display:flex;align-items:center;gap:22px;padding:22px 22px 16px}
+.igcard .av{width:92px;height:92px;border-radius:50%;padding:3px;background:conic-gradient(from 200deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5,#feda75);flex:none}
+.igcard .av img{width:100%;height:100%;border-radius:50%;border:3px solid #fff;object-fit:cover}
+.igcard .who b{display:block;font-size:1.15rem;letter-spacing:-.01em}
+.igcard .who small{display:block;color:#737373;font-size:.85rem;margin:2px 0 10px}
+.igcard .who a{display:inline-block;background:#0095f6;color:#fff;font-size:.82rem;font-weight:600;padding:7px 18px;border-radius:8px}
+.igcard .who a:hover{background:#1877f2}
+.igcard .tabs2{display:flex;justify-content:center;gap:40px;border-top:1px solid #efefef;font-size:.7rem;font-weight:700;letter-spacing:.14em;color:#262626;text-transform:uppercase}
+.igcard .tabs2 span{padding:12px 0;border-top:1px solid #262626;margin-top:-1px}
+.igcard .grid img{width:100%;display:block}
+.igcard .cap{padding:12px 18px;color:#737373;font-size:.8rem;text-align:center}
+@media (max-width:520px){.igcard .av{width:72px;height:72px}.igcard .head{gap:16px;padding:18px 16px 14px}}
+
 /* SEO / FAQ */
 .seo-text{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
 .seo-text h2{font-size:clamp(2.2rem,4.6vw,3.6rem);margin:16px 0 20px}
@@ -579,6 +595,20 @@ footer{padding:80px 0 40px}
           </div>
         </div>
       </div>
+      <div class="igcard reveal">
+        <div class="bar"><span>Instagram</span>@svadbyzatelieru</div>
+        <div class="head">
+          <div class="av"><img src="ig-avatar.jpg" alt="Svadby z Ateliéru – Ateliér Kvety Trstená"></div>
+          <div class="who">
+            <b>svadbyzatelieru</b>
+            <small>Svadby z Ateliéru · #atelierkvety · Trstená</small>
+            <a href="https://www.instagram.com/svadbyzatelieru/" target="_blank" rel="noopener">Pozrieť na Instagrame</a>
+          </div>
+        </div>
+        <div class="tabs2"><span>Svadobné výzdoby</span></div>
+        <a class="grid" href="https://www.instagram.com/svadbyzatelieru/" target="_blank" rel="noopener"><img src="ig-vyzdoba.jpg" alt="Svadobné výzdoby sál od Svadby z Ateliéru – Orava, Trstená" loading="lazy"></a>
+        <div class="cap">Ukážky svadobných výzdob z Instagramu @svadbyzatelieru</div>
+      </div>
       <div class="steps reveal" style="margin-top:70px">
         <div class="step"><h4>Zavolajte mi</h4><p>Povedzte mi termín, miesto a čo by ste chceli – video, výzdobu, prípadne aj svadobné auto.</p></div>
         <div class="step"><h4>Výzdoba na mieru</h4><p>So Svadby z Ateliéru dohodnete farby, kvety a výzdobu sály podľa vašich predstáv.</p></div>
@@ -595,7 +625,7 @@ footer{padding:80px 0 40px}
     <div class="wrap">
       <div class="tag">Čo ponúka s_stroka.vid</div>
       <h1>Služby</h1>
-      <p>Od celodenného svadobného filmu po krátky klip na sociálne siete. Vyberte si a objednajte.</p>
+      <p>Od celodenného svadobného filmu po krátky klip na sociálne siete, svadobné auto aj výzdobu. Vyberte si a objednajte.</p>
     </div>
   </div>
   <section style="padding-top:0">
@@ -604,6 +634,8 @@ footer{padding:80px 0 40px}
         <div class="svc reveal"><div class="n">01</div><h3>Svadby</h3><p>Svadobný film, highlight video a krátke klipy na Instagram. Celý deň od príprav až po prvý tanec.</p><a href="#svadby" class="more">Pozrieť svadby →</a></div>
         <div class="svc reveal"><div class="n">02</div><h3>Hudobné videá & klipy</h3><p>Klipy pre kapely a interpretov, zostrihy zo zábav a koncertov, od natáčania až po strih a farby.</p><a href="#tvorba" class="more">Pozrieť klipy →</a></div>
         <div class="svc reveal"><div class="n">03</div><h3>Reklamy & akcie</h3><p>Promo videá pre firmy, aftermovie z podujatí a krátke formáty na sociálne siete.</p><a href="#tvorba" class="more">Pozrieť reklamy →</a></div>
+        <div class="svc reveal"><div class="n">04</div><h3>Svadobné auto</h3><p>Prenájom červeného kabrioletu Peugeot 306 Cabriolet od 150 €. So svadobným videom za zvýhodnenú cenu.</p><a href="#auto" class="more">Pozrieť auto →</a></div>
+        <div class="svc reveal"><div class="n">05</div><h3>Svadobná výzdoba</h3><p>V spolupráci s #atelierkvety v Trstenej: výzdoba sály, kytice a prenájom výzdoby. Video + výzdoba za lepšiu cenu.</p><a href="#vyzdoba" class="more">Pozrieť výzdobu →</a></div>
       </div>
     </div>
   </section>
