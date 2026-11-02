@@ -275,6 +275,19 @@ textarea{resize:vertical;min-height:130px}
 .igcard .cap{padding:12px 18px;color:#737373;font-size:.8rem;text-align:center}
 @media (max-width:520px){.igcard .av{width:72px;height:72px}.igcard .head{gap:16px;padding:18px 16px 14px}}
 
+.helpbox{margin-top:22px;background:var(--dark);color:var(--white);border-radius:var(--r);padding:28px 26px;position:relative;overflow:hidden}
+.helpbox::after{content:"?";position:absolute;right:-6px;top:-34px;font-family:var(--serif);font-style:italic;font-size:11rem;line-height:1;color:rgba(255,255,255,.06);pointer-events:none}
+.helpbox h3{font-size:1.5rem;margin:12px 0 10px}
+.helpbox p{color:#b9b9b4;font-size:.95rem;margin-bottom:18px}
+.helpbox .btn{background:var(--white);color:var(--dark);border-color:var(--white)}
+.helpbox .btn:hover{background:transparent;color:var(--white)}
+.helpbox small{display:block;color:#8d8d88;font-size:.78rem;margin-top:12px}
+.callband{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;background:var(--card);border:1px solid var(--line);border-radius:calc(var(--r) + 6px);padding:30px 34px;margin-bottom:60px}
+.callband h3{font-size:clamp(1.4rem,2.8vw,2rem)}
+.callband p{color:var(--muted);margin-top:6px}
+.callband .hero-btns{flex:none}
+@media (max-width:520px){.callband{padding:26px 22px}}
+
 /* SEO / FAQ */
 .seo-text{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
 .seo-text h2{font-size:clamp(2.2rem,4.6vw,3.6rem);margin:16px 0 20px}
@@ -704,6 +717,12 @@ footer{padding:80px 0 40px}
           <div class="info-row"><span>Instagram</span><a href="https://www.instagram.com/s_stroka.vid/" target="_blank" rel="noopener">@s_stroka.vid ↗</a></div>
           <div class="info-row"><span>Pôsobím</span><b>Orava · celé Slovensko</b></div>
         </div>
+        <div class="helpbox">
+          <div class="tag" style="color:#a9a9a4">Potrebujete poradiť?</div>
+          <h3>Neviete sa rozhodnúť? Zavolajte mi.</h3>
+          <p>Neviete, aké video zvoliť, či sa vám oplatí balíček s autom alebo výzdobou, alebo len chcete overiť voľný termín? Stačí krátky hovor – všetko vám rád vysvetlím a poradím, nič vás to nestojí.</p>
+          <a href="tel:+421949098880" class="btn">Zavolať 0949 098 880 <span class="ar">→</span></a>
+        </div>
       </div>
 
       <div class="reveal">
@@ -786,6 +805,16 @@ footer{padding:80px 0 40px}
 
 <footer>
   <div class="wrap">
+    <div class="callband">
+      <div>
+        <h3>Neviete sa rozhodnúť? <span class="it">Zavolajte mi.</span></h3>
+        <p>Rád poradím s videom, svadobným autom aj výzdobou – a poviem vám, či mám voľný termín.</p>
+      </div>
+      <div class="hero-btns">
+        <a href="tel:+421949098880" class="btn">Zavolať 0949 098 880</a>
+        <a href="#kontakt" class="btn ghost">Napísať správu</a>
+      </div>
+    </div>
     <div class="foot-big">s_stroka.vid</div>
     <p style="color:var(--muted);font-size:.9rem;max-width:760px;margin-bottom:26px">Samuel Stroka – svadobný kameraman z Oravy. Natáčam svadobné videá, hudobné videá, klipy, zostrihy zo zábav a koncertov a reklamné videá v okolí Dolného Kubína, Tvrdošína, Námestova, Trstenej a po celom Slovensku.</p>
     <div class="foot">
