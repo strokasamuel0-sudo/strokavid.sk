@@ -212,7 +212,7 @@ textarea{resize:vertical;min-height:130px}
 /* SVADOBNÉ AUTO */
 .car-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:22px;align-items:stretch}
 .car-main{border-radius:calc(var(--r) + 6px);overflow:hidden;background:var(--bg2);min-height:100%}
-.car-main img{width:100%;height:100%;object-fit:cover}
+.car-main img{width:100%;height:100%;object-fit:cover;object-position:center 62%}
 .car-info{background:var(--card);border:1px solid var(--line);border-radius:calc(var(--r) + 6px);padding:36px 32px;display:flex;flex-direction:column}
 .car-info h2{font-size:clamp(1.9rem,3.4vw,2.6rem);margin:14px 0 14px}
 .car-info p{color:var(--muted);margin-bottom:14px}
@@ -229,6 +229,22 @@ textarea{resize:vertical;min-height:130px}
 .car-gallery a:hover img{transform:scale(1.04)}
 @media (max-width:980px){.car-grid{grid-template-columns:1fr}.car-main{aspect-ratio:3/2}.car-gallery{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.car-gallery{grid-template-columns:1fr}.car-info{padding:28px 22px}}
+
+.bundle{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;background:var(--white);border:2px solid var(--dark);border-radius:calc(var(--r) + 6px);padding:30px 34px;margin-top:34px;position:relative}
+.bundle .bdg{position:absolute;top:-14px;left:30px;background:#d43c2c;color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 14px;border-radius:999px}
+.bundle .ico{font-size:2.6rem;line-height:1}
+.bundle h3{font-size:clamp(1.4rem,2.6vw,1.9rem);margin-bottom:6px}
+.bundle p{color:var(--muted);margin:0}
+.car-teaser{display:grid;grid-template-columns:1fr 1.1fr;background:var(--dark);color:var(--white);border-radius:calc(var(--r) + 10px);overflow:hidden}
+.car-teaser .img{min-height:360px;background:#000}
+.car-teaser .img img{width:100%;height:100%;object-fit:cover}
+.car-teaser .txt{padding:56px 50px;display:flex;flex-direction:column;justify-content:center}
+.car-teaser h2{font-size:clamp(2.2rem,4.6vw,3.6rem);margin:14px 0 16px}
+.car-teaser h2 .it{color:#a9a9a4}
+.car-teaser p{color:#b9b9b4;margin-bottom:12px}
+.car-teaser .price{font-size:1.15rem;font-weight:700;color:#fff;margin:6px 0 22px}
+.car-teaser .bdg2{display:inline-block;background:#d43c2c;color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin-bottom:14px;width:max-content}
+@media (max-width:980px){.bundle{grid-template-columns:1fr;gap:14px;padding:34px 24px 26px}.bundle .ico{display:none}.car-teaser{grid-template-columns:1fr}.car-teaser .img{min-height:0;aspect-ratio:4/3}.car-teaser .txt{padding:34px 26px}}
 
 /* SEO / FAQ */
 .seo-text{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
@@ -313,6 +329,7 @@ footer{padding:80px 0 40px}
         <div class="hero-btns">
           <button class="btn ghost" id="toUkazky">Pozrieť ukážky ↓</button>
           <a href="#kontakt" data-typ="Svadba" class="btn">Cenová ponuka na svadbu <span class="ar">→</span></a>
+          <a href="#auto" class="btn ghost">🚗 Svadobné auto</a>
         </div>
       </div>
     </div>
@@ -333,6 +350,26 @@ footer{padding:80px 0 40px}
       </div>
       <div id="weddingBig"></div>
       <div class="grid2" id="weddingVideos" style="margin-top:22px"></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="car-teaser reveal">
+        <div class="img"><img src="auto-3.jpg" alt="Svadobné auto na prenájom – červený kabriolet Peugeot 306 Cabriolet" loading="lazy"></div>
+        <div class="txt">
+          <div class="bdg2">Novinka · Balíček video + auto</div>
+          <div class="tag" style="color:#a9a9a4">Svadobné auto na prenájom</div>
+          <h2>Príďte na svadbu <span class="it">v kabriolete</span></h2>
+          <p>Červený Peugeot 306 Cabriolet so stiahnutou strechou – štýlový príjazd na obrad a nádherné zábery do vášho filmu.</p>
+          <p>Pri objednaní spolu so svadobným videom za <strong style="color:#fff">zvýhodnenú cenu</strong>.</p>
+          <div class="price">Prenájom od 150 €</div>
+          <div class="hero-btns">
+            <a href="#auto" class="btn light">Pozrieť svadobné auto <span class="ar">→</span></a>
+            <a href="tel:+421949098880" class="btn glass">0949 098 880</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -418,7 +455,7 @@ footer{padding:80px 0 40px}
   <section style="padding-top:0">
     <div class="wrap">
       <div class="car-grid">
-        <div class="car-main reveal"><img src="auto-2.jpg" alt="Svadobné auto na prenájom Orava – červený kabriolet Peugeot 306 Cabriolet" loading="lazy"></div>
+        <div class="car-main reveal"><img src="auto-3.jpg" alt="Svadobné auto na prenájom Orava – červený kabriolet Peugeot 306 Cabriolet" loading="lazy"></div>
         <div class="car-info reveal">
           <div class="tag">Peugeot 306 Cabriolet</div>
           <h2>Červený kabriolet <span class="it">s otvorenou strechou</span></h2>
@@ -441,9 +478,18 @@ footer{padding:80px 0 40px}
           </div>
         </div>
       </div>
+      <div class="bundle reveal">
+        <div class="bdg">Balíček</div>
+        <div class="ico">💍</div>
+        <div>
+          <h3>Svadobné video + kabriolet</h3>
+          <p>Keď u mňa objednáte natáčanie svadby, kabriolet k tomu dostanete <strong>za zvýhodnenú cenu</strong>. Auto bude zároveň súčasťou vášho svadobného filmu – príjazd, jazda aj posvadobné zábery v kabriolete. Presnú cenu balíčka dohodneme telefonicky.</p>
+        </div>
+        <a href="#kontakt" data-typ="Svadba" data-auto="balik" class="btn">Chcem balíček <span class="ar">→</span></a>
+      </div>
       <div class="car-gallery">
         <a class="reveal" href="auto-1.jpg" target="_blank" rel="noopener"><img src="auto-1.jpg" alt="Svadobné auto Peugeot 306 Cabriolet s bielou výzdobou" loading="lazy"></a>
-        <a class="reveal" href="auto-3.jpg" target="_blank" rel="noopener"><img src="auto-3.jpg" alt="Červený svadobný kabriolet na Orave" loading="lazy"></a>
+        <a class="reveal" href="auto-2.jpg" target="_blank" rel="noopener"><img src="auto-2.jpg" alt="Červený svadobný kabriolet pri jazierku na Orave" loading="lazy"></a>
         <a class="reveal" href="auto-4.jpg" target="_blank" rel="noopener"><img src="auto-4.jpg" alt="Interiér kabrioletu Peugeot 306 so stiahnutou strechou" loading="lazy"></a>
       </div>
       <div style="text-align:center;margin-top:60px" class="reveal">
@@ -576,6 +622,7 @@ footer{padding:80px 0 40px}
           <div class="f full"><label>Svadobné auto na prenájom (Peugeot 306 Cabriolet, od 150 €)</label>
             <select name="Svadobné auto">
               <option>Áno, mám záujem</option>
+              <option>Áno – balíček svadobné video + kabriolet</option>
               <option>Nie</option>
               <option selected>Ešte neviem</option>
             </select></div>
@@ -729,7 +776,7 @@ document.addEventListener('click',e=>{
   const a=e.target.closest('a[href^="#"]'); if(!a) return;
   const id=a.getAttribute('href').slice(1); if(!pages.includes(id)) return;
   e.preventDefault();
-  if(a.dataset.auto){const sa=document.querySelector('select[name="Svadobné auto"]');if(sa)sa.value='Áno, mám záujem'}
+  if(a.dataset.auto){const sa=document.querySelector('select[name="Svadobné auto"]');if(sa)sa.value=a.dataset.auto==='balik'?'Áno – balíček svadobné video + kabriolet':'Áno, mám záujem'}
   if(a.dataset.typ){if(/Svad/.test(a.dataset.typ))tab('wForm');else{tab('oForm');const s=$('#typ');[...s.options].forEach(o=>{if(o.text===a.dataset.typ)s.value=o.value})}}
   show(id,true);
 });
